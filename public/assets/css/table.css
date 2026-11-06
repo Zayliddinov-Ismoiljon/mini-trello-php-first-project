@@ -1,0 +1,74 @@
+.tbl-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--s-border, #eef0f4);
+    border-radius: 14px;
+}
+
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-size: 13.5px;
+}
+
+
+
+.tbl thead th {
+    padding: 14px 18px;
+    background: var(--s-input, #f4f6fb);
+    color: var(--s-muted, #94a3b8);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.tbl tbody td {
+    padding: 14px 18px;
+    border-top: 1px solid var(--s-border, #eef0f4);
+    color: var(--s-text, #475569);
+    vertical-align: middle;
+}
+
+.tbl tbody tr {
+    transition: background 0.15s;
+}
+
+.tbl tbody tr:hover {
+    background: #f8fafc;
+}
+
+.tbl td:first-child {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.tbl-actions {
+    text-align: right !important;
+    white-space: nowrap;
+}
+
+.tbl-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
+    border-radius: 9px;
+    color: var(--s-text, #475569);
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.tbl-btn:hover {
+    background: var(--s-blue-soft, #eaf1ff);
+    color: var(--s-blue, #2563eb);
+}
+
+.tbl-btn.danger:hover {
+    background: #fef2f2;
+    color: #dc2626;
+}

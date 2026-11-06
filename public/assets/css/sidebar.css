@@ -1,0 +1,215 @@
+:root {
+    --sb-width: 260px;
+    --sb-bg: #0f172a;
+    --sb-text: #94a3b8;
+    --sb-text-hover: #e2e8f0;
+    --sb-accent: #6366f1;
+    --sb-hover-bg: rgba(255, 255, 255, 0.05);
+    --sb-active-bg: rgba(99, 102, 241, 0.16);
+    --sb-border: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sb-width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 14px;
+    background: var(--sb-bg);
+    border-right: 1px solid var(--sb-border);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+}
+
+.main-content {
+    margin-left: var(--sb-width);
+    padding: 30px;
+}
+
+/* Logotip */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 10px 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--sb-border);
+    text-decoration: none;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.brand-text small {
+    color: var(--sb-text);
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* Menyu */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    padding-top: 12px;
+}
+
+.sidebar-label {
+    padding: 14px 12px 6px;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sidebar-label:first-child {
+    padding-top: 4px;
+}
+
+.sidebar-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    color: var(--sb-text);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.sidebar-link i {
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.sidebar-link:hover {
+    background: var(--sb-hover-bg);
+    color: var(--sb-text-hover);
+    transform: translateX(3px);
+}
+
+.sidebar-link.active {
+    background: var(--sb-active-bg);
+    color: #fff;
+}
+
+.sidebar-link.active i {
+    color: #a5b4fc;
+}
+
+.sidebar-link.active::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    width: 4px;
+    height: 22px;
+    background: var(--sb-accent);
+    border-radius: 0 4px 4px 0;
+    transform: translateY(-50%);
+}
+
+/* Pastki foydalanuvchi kartasi */
+.sidebar-footer {
+    padding-top: 14px;
+    border-top: 1px solid var(--sb-border);
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--sb-hover-bg);
+}
+
+.user-avatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    line-height: 1.25;
+}
+
+.user-info strong {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-info span {
+    color: var(--sb-text);
+    font-size: 12px;
+}
+
+.user-logout {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    color: #f87171;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.user-logout:hover {
+    background: rgba(248, 113, 113, 0.15);
+    color: #fca5a5;
+}
+
+
+

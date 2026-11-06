@@ -1,0 +1,17 @@
+{
+    "require": {
+        "rakit/validation": "^1.4"
+    },
+    "autoload": {
+        "files": [
+            "config/database.php",
+            "src/Helpers/backToPage.php",
+            "src/Helpers/flashMessage.php",
+            "src/Helpers/generateLogin.php",
+            "src/Helpers/validation/roleValidation.php",
+            "src/Helpers/validation/userValidation.php",
+            "src/Helpers/validation/taskValidation.php",
+            "src/Helpers/validation/projectValidation.php"
+        ]
+    }
+}
